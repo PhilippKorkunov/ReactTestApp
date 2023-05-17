@@ -7,4 +7,4 @@
 2) Бизнесс лой
 3) Внишний слой
 
-Данные хранятся в базе данных PostgreSQL (бэкапп базы данных находится в папке \TestTaskApp\DataBase_BackApp)
+Данные хранятся в базе данных PostgreSQL (бэкапп базы данных находится в папке \TestTaskApp\DataBase_Backup)
