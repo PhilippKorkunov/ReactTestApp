@@ -9,7 +9,6 @@ namespace DataLayer
         public DbSet<Post> Post { get; set; }
 
 
-
         public Context(DbContextOptions<Context> options) : base(options)
         { }
     }

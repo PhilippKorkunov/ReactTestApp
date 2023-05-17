@@ -16,6 +16,7 @@ namespace BusinessLayer.Implementations
             this.context = context;
         }
 
+
         public async Task<IQueryable<T>?> GetAsync(int takeNumber = 0, Expression<Func<T, bool>>? predicate = null)
         {
             if (takeNumber == 0) 

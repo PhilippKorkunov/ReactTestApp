@@ -27,7 +27,6 @@ namespace TestTaskApp.Controllers
         [HttpGet("GetOnePagePosts")]
         public async Task<IActionResult> GetOnePageUsersAsync(int pageNumber, int pageSize) //Get с ПАГИНАЦИЕЙ, возвращающий страницу с №pageNumber
         {
-
             await using var postRepository = dataManager.PostRepository;
             var users = await postRepository.GetAsync();
 
@@ -47,7 +46,7 @@ namespace TestTaskApp.Controllers
         }
 
         [HttpPost("InsertPosts")]
-        public async Task<IActionResult> InsertPostsAsync()
+        public async Task<IActionResult> InsertPostsAsync() //добавление в БД тестовых записей
         {
             await using var postRepository = dataManager.PostRepository;
             var postList = new List<Post>();

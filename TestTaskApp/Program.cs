@@ -16,15 +16,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-/*
-builder.Services.AddDbContext<Context>(options =>
-        options.UseNpgsql(builder.Configuration.GetConnectionString("TestAppDb")));
-*/
+
 var optionsBuilder = new DbContextOptionsBuilder<Context>();
 var options = optionsBuilder.UseNpgsql(builder.Configuration.GetConnectionString("TestAppDb")).Options;
 
 builder.Services.AddScoped<DataManager>(_ => new DataManager(
-                                        new EFRepository<Post>(new Context(options))));
+                                        new EFRepository<Post>(new Context(options)))); //dependency injection
 
 builder.Services.AddDbContext<Context>(options =>
         options.UseNpgsql(builder.Configuration.GetConnectionString("TestAppDb")));
